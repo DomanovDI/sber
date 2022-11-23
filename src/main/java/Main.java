@@ -1,6 +1,7 @@
 import model.City;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.NoSuchElementException;
@@ -11,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String fileName = "src/main/resources/file.csv";
         Path path = Paths.get(fileName);
-        Scanner scanner = new Scanner(path);
+        Scanner scanner = new Scanner(path, StandardCharsets.UTF_8);
         while (scanner.hasNextLine()){
             City city = parseLine(scanner.nextLine());
             System.out.println(city);
