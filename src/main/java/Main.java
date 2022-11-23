@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String fileName = "src/main/resources/Задача ВС Java Сбер.csv";
+        String fileName = "src/main/resources/file.csv";
         Path path = Paths.get(fileName);
         Scanner scanner = new Scanner(path);
         while (scanner.hasNextLine()){
